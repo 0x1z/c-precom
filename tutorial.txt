@@ -1,0 +1,33 @@
+sudo find / -name "stdc++.h"
+/usr/include/c++/12.2.1/x86_64-pc-linux-gnu/bits/stdc++.h
+/usr/include/c++/12.2.1/x86_64-pc-linux-gnu/32/bits/stdc++.h
+
+
+ sudo find / -name "assoc_container.hpp"
+
+ /usr/include/c++/12.2.1/ext/pb_ds/assoc_container.hpp
+
+  /usr/include/c++/12.2.1/ext/pb_ds/tree_policy.hpp
+
+  compile whole pb_ds
+
+
+  command to compile will be specify the c++ version you have in your build like c++20 i have i will use 
+
+
+   sudo g++ -std=c++20  trie_policy.hpp
+
+   here i am compiling the treepolicy in the same directory with the command as it will look for precompiled header first and then for the .h file
+
+   precompiled header is of for .gcp
+
+
+ i am also includunf local tempelate for the upper.h precompile and include it in the local build 
+
+ it has taken care for the online judge as well 
+
+ use command  g++ -std=c++20  upper.h in same directory
+
+ i have it here /home/batman/cp/upper.h
+
+ batman here is my username for the user acc

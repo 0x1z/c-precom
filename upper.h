@@ -56,4 +56,10 @@ void _print(pbds v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} ce
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 
-
+void redirectIO() {
+#ifndef ONLINE_JUDGE
+	freopen("input1.txt", "r", stdin);
+	freopen("output1.txt", "w", stdout);
+	freopen("Error.txt", "w", stderr);
+#endif
+}

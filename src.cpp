@@ -1,6 +1,7 @@
 #ifndef ONLINE_JUDGE
 #include </home/batman/cp/upper.h>
 #else
+
 #pragma GCC optimize("O3,unroll-loops")
 #include<bits/stdc++.h>
 #include<ext/pb_ds/assoc_container.hpp>
@@ -58,50 +59,36 @@ void _print(pbds v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} ce
 
 mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
-
-
+void redirectIO() {
+#ifndef ONLINE_JUDGE
+  freopen("input1.txt", "r", stdin); freopen("output1.txt", "w", stdout); freopen("Error.txt", "w", stderr);
+#endif
+}
 
 #endif
 
-
 void solve() {
-	ll v1, v2, t, d;
-	cin >> v1 >> v2 >> t >> d;
-
-	int V = v1;
-	int Ans = V;
-
-	for (ll i = 1; i < t; i++) {
-		V = min(V + d, v2 + (t - i - 1) * d);
-		Ans += V;
-
-	}
-	cout << Ans << nline;
 
 }
 
 int main()  {
-	fastio();
-#ifndef ONLINE_JUDGE
-	freopen("input1.txt", "r", stdin);
-	freopen("output1.txt", "w", stdout);
-	freopen("Error.txt", "w", stderr);
-#endif
+  fastio();
+  redirectIO();
 
-	auto start1 = high_resolution_clock::now();
+  auto start1 = high_resolution_clock::now();
 
-	ll t = 1;
-	// cin >> t;
-	while (t--) {
-		solve();
-	}
+  ll t;
+  cin >> t;
+  while (t--) {
+    solve();
+  }
 
-	auto stop1 = high_resolution_clock::now();
-	auto duration = duration_cast<microseconds>(stop1 - start1);
+  auto stop1 = high_resolution_clock::now();
+  auto duration = duration_cast<microseconds>(stop1 - start1);
 
 #ifndef ONLINE_JUDGE
-	cerr << "done" << nline;
-	cerr << "Time: " << duration . count() / 1000 << endl;
+  cerr << "done" << nline;
+  cerr << "Time: " << duration . count() / 1000 << endl;
 #endif
 
 }

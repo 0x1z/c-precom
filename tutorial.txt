@@ -3,6 +3,14 @@ sudo find / -name "stdc++.h"
 /usr/include/c++/12.2.1/x86_64-pc-linux-gnu/32/bits/stdc++.h
 
 
+ for file in *.h; do
+    if [ "$file" != "basic_file.h" ] && [ "$file" != "c++locale.h" ] && [ "$file" != "ctype_base.h" ] && [ "$file" != "ctype_inline.h" ] && [ "$file" != "messages_members.h" ] && [ "$file" != "opt_random.h" ] && [ "$file" != "time_members.h" ]; then
+        sudo g++ -std=c++20 "$file"
+    fi
+done
+
+
+
  sudo find / -name "assoc_container.hpp"
 
  /usr/include/c++/12.2.1/ext/pb_ds/assoc_container.hpp
